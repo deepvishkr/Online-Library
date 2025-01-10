@@ -1,0 +1,253 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navbar Styles */
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  padding: 10px;
+  list-style-type: none;
+  margin: 0;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+  color: #f4f4f9;
+}
+
+/* Home Page Styles */
+.home h1 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.home p {
+  font-size: 1.25rem;
+  color: #555;
+}
+
+/* Category List Styles */
+.category-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.category-list li {
+  background-color: #fff;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.category-list li:hover {
+  background-color: #f1f1f1;
+}
+
+/* Book Card Styles */
+.book-card {
+  background-color: #ffffff;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.book-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.book-card p {
+  margin: 5px 0;
+  color: #777;
+}
+
+.book-card a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.book-card a:hover {
+  text-decoration: underline;
+}
+
+/* Book List Styles */
+.book-list .book-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Search Bar Styles */
+.search-container input {
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.search-container input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Add Book Form Styles */
+.add-book-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-book-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.add-book-form input,
+.add-book-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+.add-book-form input:focus,
+.add-book-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.add-book-form button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.add-book-form button:hover {
+  background-color: #218838;
+}
+
+.add-book-form .error {
+  color: red;
+  font-size: 0.875rem;
+}
+
+/* 404 Page Styles */
+.not-found {
+  text-align: center;
+  padding: 50px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.not-found h2 {
+  font-size: 2.5rem;
+  color: #ff4d4d;
+  margin-bottom: 20px;
+}
+
+.not-found p {
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.not-found a {
+  font-size: 1.125rem;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.not-found a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .book-list .book-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  .add-book-form {
+    padding: 15px;
+  }
+
+  .search-container input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .home h1 {
+    font-size: 2rem;
+  }
+
+  .book-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .book-card p {
+    font-size: 0.875rem;
+  }
+}
